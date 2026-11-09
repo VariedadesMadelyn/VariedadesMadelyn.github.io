@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#880015">
+    <title>Variedades Madelyn | Enlaces Oficiales</title>
+    
+    <meta name="description" content="Enlaces oficiales de Variedades Madelyn. Contáctanos por WhatsApp, teléfono, TikTok, Instagram y Facebook.">
+    <meta property="og:title" content="Variedades Madelyn | Enlaces Oficiales">
+    <meta property="og:description" content="Encuentra todas nuestras redes sociales y canales de atención directa.">
+    <meta property="og:image" content="img/logo%20variedades.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/logo%20variedades.jpeg">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 (Iconos de Redes Sociales) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Canvas de Partículas Elegantes -->
+    <canvas id="particles-canvas"></canvas>
+
+    <main class="tree-container">
+        <!-- Encabezado con Logo y Perfil -->
+        <header class="profile-header">
+            <div class="logo-wrapper">
+                <img src="img/logo%20variedades.jpeg" alt="Logo de Variedades Madelyn" class="profile-logo">
+            </div>
+            <p class="store-bio">Tu tienda de confianza</p>
+        </header>
+
+        <!-- Lista de Enlaces -->
+        <section class="links-section" aria-label="Enlaces Oficiales">
+            <!-- WhatsApp -->
+            <a href="https://wa.link/5nn2lv" target="_blank" rel="noopener noreferrer" class="link-card whatsapp-card">
+                <div class="icon-box whatsapp-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="link-text">
+                    <span class="link-title">WhatsApp Oficial</span>
+                    <span class="link-subtitle">Escríbenos para pedidos y consultas</span>
+                </div>
+                <div class="arrow-box">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <!-- Teléfono -->
+            <a href="tel:+50257074510" class="link-card phone-card">
+                <div class="icon-box phone-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="link-text">
+                    <span class="link-title">Llamada Telefónica</span>
+                    <span class="link-subtitle">+502 5707 4510</span>
+                </div>
+                <div class="arrow-box">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@madelyn.variedades?_r=1&_t=ZS-9BFU0fbgUeD" target="_blank" rel="noopener noreferrer" class="link-card tiktok-card">
+                <div class="icon-box tiktok-icon">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <div class="link-text">
+                    <span class="link-title">TikTok</span>
+                    <span class="link-subtitle">@madelyn.variedades • Videos y novedades</span>
+                </div>
+                <div class="arrow-box">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/varmadelyn_?exln=MWpsdWJoaHBsNjQ3Mg==" target="_blank" rel="noopener noreferrer" class="link-card instagram-card">
+                <div class="icon-box instagram-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="link-text">
+                    <span class="link-title">Instagram</span>
+                    <span class="link-subtitle">@varmadelyn_ • Catálogo y fotos</span>
+                </div>
+                <div class="arrow-box">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/share/1MaCbwnj4j/" target="_blank" rel="noopener noreferrer" class="link-card facebook-card">
+                <div class="icon-box facebook-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="link-text">
+                    <span class="link-title">Facebook</span>
+                    <span class="link-subtitle">Página oficial • Visítanos</span>
+                </div>
+                <div class="arrow-box">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </a>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <p>&copy; <span id="year"></span> <strong>Variedades Madelyn</strong></p>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Actualizar año dinámicamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Sistema de Partículas (Mayor cantidad: 70 partículas)
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let particlesArray = [];
+        const numberOfParticles = 70; // Aumentado para mayor presencia
+
+        function setCanvasSize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        setCanvasSize();
+
+        window.addEventListener('resize', () => {
+            setCanvasSize();
+            initParticles();
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2.2 + 0.6; // Tamaños sutiles variados
+                this.speedX = (Math.random() - 0.5) * 0.25; 
+                this.speedY = -Math.random() * 0.35 - 0.1; // Flotación suave hacia arriba
+                this.opacity = Math.random() * 0.35 + 0.15; // Opacidad elegante
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Reiniciar posición si sale de los límites
+                if (this.y < 0) {
+                    this.y = canvas.height;
+                    this.x = Math.random() * canvas.width;
+                }
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+            }
+
+            draw() {
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+            }
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+    </script>
+</body>
+</html>
